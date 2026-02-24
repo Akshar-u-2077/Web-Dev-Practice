@@ -1,11 +1,27 @@
-let num = [5, -2, 10, -3];
-let maxnum=num[0];
-for(let i=0;i<num.length;i++)
-{
-    if(maxnum<num[i])
-    {
-        maxnum=num[i];
-    }
+let button = document.getElementById("MyButton");
+let countertext = document.getElementById("countertext");
+let count=0;
+button.addEventListener("click",function(){
+    count++;
+    countertext.textContent = "Button Clicked "+count+" times";
+});
 
+
+
+let greetelement  = document.getElementById("greeting");
+let hour = new Date().getHours();
+let mes="";
+if(hour<12)
+{
+    mes="Good Morning!";
 }
-console.log(maxnum);
+else if(hour<18)
+{
+    mes="Good Afternoon!";
+}
+else
+{
+    mes="Good Evening!";
+}
+greetelement.textContent=mes;
+console.log(greetelement);
